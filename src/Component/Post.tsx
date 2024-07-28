@@ -1,4 +1,5 @@
 import React from 'react';
+import Card from './UI/Card';
 
 interface PostProps {
   author: string;
@@ -11,22 +12,22 @@ interface PostProps {
 
 const Post: React.FC<PostProps> = ({ author, timeAgo, content, commentsCount, avatarUrl, emoji }) => {
   return (
-    <div className="p-4 mb-4 bg-secondary rounded-lg shadow-md">
-      <div className="flex items-center mb-2">
+   <Card>
+      <div className="flex items-center ">
         <img src={avatarUrl} alt={`${author}'s avatar`} className="w-10 h-10 mr-3 rounded-full" />
         <div>
-          <h4 className="text-sm font-bold text-white">{author}</h4>
-          <p className="text-xs text-gray-400">{timeAgo}</p>
+          <h4 className="text-sm font-bold text-[#C5C7CA]">{author}</h4>
+          <p className="text-xs text-[#7F8084]">{timeAgo}</p>
         </div>
       </div>
-      <div className="flex items-center mb-2">
-        <span className="mr-2">{emoji}</span>
-        <p className="text-sm text-white">{content}</p>
+      <div className="flex rounded-lg	 items-center bg-primary p-5  ">
+        <p className="mr-2">{emoji}</p>
+        <p className="text-sm text-[#7F8084]">{content}</p>
       </div>
       <div className="text-sm text-gray-400">
-        <span>{commentsCount} comments</span>
+        <p>{commentsCount} comments</p>
       </div>
-    </div>
+    </Card>
   );
 };
 

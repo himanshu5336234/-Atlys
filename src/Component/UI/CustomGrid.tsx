@@ -36,7 +36,7 @@ const CustomGrid: React.FC<GridProps> = ({
   children,
 }) => {
   // Determine the container or item class
-  const className = container ? `grid ${getSpacingClasses(spacing)}`: `${getColumnSpan(xs || 12)} ${getColumnSpan(sm)} ${getColumnSpan(md)} ${getColumnSpan(lg)} ${getColumnSpan(xl)}`;
+  const className = container ? `grid grid-flow-row-dense grid-cols-12 ${getSpacingClasses(spacing)}`: `${getColumnSpan(xs || 12)} ${getColumnSpan(sm)} ${getColumnSpan(md)} ${getColumnSpan(lg)} ${getColumnSpan(xl)}`;
 
   return <div className={className}>{children}</div>;
 };

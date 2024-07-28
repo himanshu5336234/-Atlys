@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Onboarding from "./Onboarding";
+import Card from "./UI/Card";
 import CustomButton from "./UI/CustomButton";
 const CreatePost: React.FC = () => {
   const [postContent, setPostContent] = useState("");
@@ -10,21 +11,22 @@ const CreatePost: React.FC = () => {
 
   return (
     <>
-      <div className="p-4 mb-4 bg-secondary rounded-lg shadow-md">
+      <Card
+      >
         <h3 className="text-lg font-semibold text-white">Create post</h3>
-        <div className="mt-2">
+        <div>
           <textarea
-            className="w-full p-2 text-white bg-primary rounded-md focus:outline-none focus:ring focus:ring-blue-500"
+            className="w-full p-2 text-white bg-primary rounded-lg focus:outline-none focus:ring focus:ring-blue-500"
             placeholder="How are you feeling today?"
             rows={3}
             value={postContent}
             onChange={(e) => setPostContent(e.target.value)}
           />
         </div>
-        <div className="flex justify-end mt-2">
-          <CustomButton label={" Post"} onClick={handlePost} />
+        <div className="flex justify-end ">
+          <CustomButton label={"Post"} onClick={handlePost} />
         </div>
-      </div>
+      </Card>
       {<Onboarding isOpen={isOpen} setModalOpen={setModalOpen} />}
     </>
   );
