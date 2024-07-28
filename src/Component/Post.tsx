@@ -20,8 +20,8 @@ const Post: React.FC<PostProps> = ({ author, timeAgo, content, commentsCount, av
           <p className="text-xs text-[#7F8084]">{timeAgo}</p>
         </div>
       </div>
-      <div className="flex rounded-lg	items-start  bg-primary p-5  ">
-        <div className="gap-5 bg-secondary px-[10px] py-[5px] rounded-full">{emoji}</div>
+      <div className="flex gap-5 rounded-lg	items-start  bg-primary p-5  ">
+        <div className=" bg-secondary px-[10px] py-[5px] rounded-full">{emoji}</div>
         <p className="text-sm text-[#7F8084]">{content}</p>
       </div>
       <div className="text-sm text-[#7F8084]">
