@@ -6,7 +6,7 @@ import CustomModal from './UI/CustomModal';
 
 
 const Onboarding= ({isOpen,setModalOpen}:{isOpen:boolean,setModalOpen:(param:boolean)=>void}) => {
-  const [isLogin,setIsLogin]=useState(false)
+  const [isLogin,setIsLogin]=useState(true)
 
   return (
 

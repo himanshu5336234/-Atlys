@@ -48,11 +48,11 @@ const SignUpForm = ({
 
         <CustomButton label="Continue" />
 
-        <p className=" text-sm text-gray-400">
+        <p className=" text-sm text-[#7F8084]">
           Already have an account?{" "}
           <span
             onClick={() => setIsLogin(true)}
-            className="text-button hover:underline"
+            className="text-white  hover:underline"
           >
             Login →
           </span>

@@ -44,8 +44,8 @@ const LoginForm = ({ setIsLogin }: { setIsLogin: (param: boolean) => void }) => 
         <CustomButton label='      Login now' />
         </div>
       </form>
-      <p className="mt-3 text-sm  text-gray-400">
-        Not registered yet? <span onClick={() => setIsLogin(true)} className="text-blue-500 hover:underline">Register</span>
+      <p className=" mt-3 text-sm text-[#7F8084]">
+        Not registered yet? <span onClick={() => setIsLogin(false)} className="text-white hover:underline">Register  →</span>
       </p>
     </div>
   );
