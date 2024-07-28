@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+      },
       colors: {
         primary: '#191920', // Custom primary color
         secondary: '#27292D', // Custom secondary background color

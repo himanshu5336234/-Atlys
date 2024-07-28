@@ -17,7 +17,7 @@ const CustomTexField: React.FC<CustomTexFieldProps> = ({
   type = 'text',
 }) => {
   return (
-    <div className="w-full max-w-xs mb-4">
+    <div className="w-full  ">
       {label && (
         <label
           htmlFor={label}
@@ -32,7 +32,7 @@ const CustomTexField: React.FC<CustomTexFieldProps> = ({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="w-full px-3 py-2 mt-2 text-[#7F8084] bg-secondary border rounded-md focus:outline-none focus:ring focus:ring-blue-500"      />
+        className="w-full px-3 py-2 mt-2 text-[#7F8084] bg-secondary border border-borderColor rounded-md focus:outline-none focus:ring focus:ring-blue-[#7F8084]"      />
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CustomButton from './UI/CustomButton';
 import CustomTexField from './UI/CustomTexField';
 
 const LoginForm = ({ setIsLogin }: { setIsLogin: (param: boolean) => void }) => {
@@ -13,45 +14,37 @@ const LoginForm = ({ setIsLogin }: { setIsLogin: (param: boolean) => void }) => 
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-center text-white">WELCOME BACK</h2>
-      <form onSubmit={handleLogin} className="mt-8 space-y-6">
-        <div className="space-y-4">
-          <div>
+      <h2 className=" text-sm text-center text-[#6B6C70]">WELCOME BACK</h2>
+      <h3 className='text-lg mt-2 font-bold text-white text-center'>Log into your account</h3>
+      <form onSubmit={handleLogin} >
+        <div className='mt-10 flex flex-col gap-5'>
 
-            <CustomTexField
-              label={"Email or Username"}
-              type="email"
-              id="email"
-              placeholder="Enter your email or username"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <CustomTexField
-              label={"Password"}
-              type="Password"
-              id="Password"
-              placeholder="Enter your password"
+          <CustomTexField
+            label={"Email or Username"}
+            type="email"
+            id="email"
+            placeholder="Enter your email or username"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <CustomTexField
+            label={"Password"}
+            type="Password"
+            id="Password"
+            placeholder="Enter your password"
 
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div>
-
-          </div>
-        </div>
+            onChange={(e) => setEmail(e.target.value)}
+          />
+    
         <div className="flex items-center justify-between">
-          <a href="#" className="text-sm text-blue-500 hover:underline">
+        <p className=" text-sm  text-gray-400">
             Forgot password?
-          </a>
+          </p>
         </div>
-        <button
-          type="submit"
-          className="w-full px-4 py-2 font-bold text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-500"
-        >
-          Login now
-        </button>
+        <CustomButton label='      Login now' />
+        </div>
       </form>
-      <p className="mt-6 text-center text-gray-400">
+      <p className="mt-3 text-sm  text-gray-400">
         Not registered yet? <span onClick={() => setIsLogin(true)} className="text-blue-500 hover:underline">Register</span>
       </p>
     </div>
